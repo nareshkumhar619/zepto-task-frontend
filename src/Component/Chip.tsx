@@ -1,5 +1,3 @@
-// Chip.tsx
-
 import React, { useState, useRef, useEffect, KeyboardEvent } from 'react';
 import './Chip.css';
 
@@ -8,7 +6,6 @@ interface ChipProps {
 }
 
 const getRandomImage = () => {
-
   const placeholderImage = 'https://wallpapers.com/images/hd/cool-profile-picture-gdhlf31a1n7pcctk.jpg';
   return placeholderImage;
 };
@@ -40,16 +37,12 @@ const Chip: React.FC<ChipProps> = ({ allItems }) => {
     }
   };
 
-  const handleChipClick = (item: string) => {
-    setHighlightedItem(item);
-  };
-
   const handleItemClick = (item: string) => {
     const updatedItems = [...selectedItems, item];
     setSelectedItems(updatedItems);
     setInputValue('');
     setHighlightedItem(null);
-    setListVisible(false); // Hide list after clicking an item
+    setListVisible(false);
   };
 
   const handleChipRemove = (removedItem: string) => {
