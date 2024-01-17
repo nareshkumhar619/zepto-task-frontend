@@ -1,82 +1,85 @@
-/* ChipComponent.css */
+/* Chip.css */
 .chip-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .input-field {
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .item-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .item {
-    padding: 8px;
-    margin: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background-color: violet;
-  }
-  
-  .item:hover {
-    background-color: #87a7b3;
-  }
-  
-  .chips {
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
-  
-  .chip {
-    background-color: #5c6ac4;
-    color: #ffffff;
-    padding: 8px;
-    margin: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .chip.highlighted {
-    background-color: #4299e1;
-    color: black;
-  }
-  
-  .remove-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-left: 4px;
-  }
-  
-  /* Additional styling for a colorful and animated background */
-  .chip-container {
-    background: linear-gradient(45deg, #5c6ac4, #48bb78, #38b2ac);
-    padding: 20px;
-    border-radius: 12px;
-  }
-  
- /* ChipComponent.css */
-/* ChipComponent.css */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.chip {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: start;
+}
 .chip:hover {
-    animation: pulse 0.5s ease-in-out;
-  }
-  
-  @keyframes pulse {
-    50% {
-      transform: scale(1.1);
-    }
-  }
-  
-  
+  transform: scale(1.05);
+}
+
+.chip-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.chip.highlighted {
+  background-color: #4299e1;
+  color: #ffffff;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #a0aec0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.item-list {
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #a0aec0;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #edf2f7;
+}
+
+.item-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 4px;
+}

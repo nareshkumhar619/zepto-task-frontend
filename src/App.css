@@ -4,6 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #fff38c);
+}
 
 .logo {
   height: 6em;
